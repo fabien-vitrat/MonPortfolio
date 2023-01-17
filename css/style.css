@@ -1,0 +1,566 @@
+/* ---------------------- IMPORT --------------------- */
+/* --------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url();
+@import url();
+@import "compass";
+
+/* -----------------CONFIG COULEURS PAGE-------------- */
+/* --------------------------------------------------- */
+:root {
+    --ecriture: #fff;
+    --background: #111;
+}
+
+/* ------------- MISE EN PAGE DU GENERAL ------------- */
+/* --------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Animations pour tout le texte de la page */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+/* Mise en page de roulette */
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: #040404 url("../img/fond.jpg") top right no-repeat;
+    background-size: cover;
+}
+html::-webkit-scrollbar-thumb {
+    background: #ff7600;
+    border-radius: 3rem;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+	padding: 0px 2% 0px 2%;
+}
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("../img/accueil.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* -------------- CONFIGURATION DU MENU -------------- */
+/* --------------------------------------------------- */
+
+/* MENU */
+nav {
+    background: #023047;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0.2px 1px 10px grey;
+    top: 0px;
+    transition: box-shadow 0.5s ease;
+}
+/* Sticky Navigation */
+.navScrolled {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 5px #000;
+}
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+/* Différentes caractéristiques du Titre de mon menu */
+nav .logo a {
+    float: left;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    text-decoration: none;
+}
+/* Ajout de couleur sur une partie de mon Titre */
+nav strong {
+    color: #FFB703;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+nav ul li {
+   display: inline-block;
+   background: #023047;
+   margin: 0 5px;
+}
+nav ul li a {
+    color: #fff;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+/* Mise en page du menu active et du menu au contact de la souris */
+nav ul li a:hover,
+nav ul li a.active,
+nav ul li label.active,
+label .active {
+    border-radius: 241px 188px / 79px;
+    background: #FFB703;
+    color: #fff;
+    width: 32%;
+}
+.show,.icon,input {
+    display: none;
+}
+#btn {display: none;}
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+/* RESPONSIVE */
+/* Mise en page du bouton pour le format Smartphone */
+@media all and (max-width:450px) {
+    nav .logo a {
+        font-size: 24px;
+    }
+}
+/* Mise en page pour tablette */
+@media screen and (min-width:950px) and (max-width:1056px) {
+    nav .logo a {
+        padding-left: 40px;
+        width: 40%;
+    }
+    nav ul {
+        margin-right: 10px;
+    }
+    nav lu li a {
+        line-height: 70px;
+        padding: 7px 11px;
+    }
+}
+/* Mise en page pour le bouton du Menu */
+@media all and (max-width:1057px) {
+    nav ul {
+        margin-right: 0px;
+        width: 100%;
+    }
+    nav .logo a {
+        padding-left: 40px;
+        width: 100%;
+    }
+    .show + a, ul {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+    .show {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 15px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show-active {
+        color: #ff7600;
+        font-weight: bold;
+    }
+    label .active {
+        color: #ff7600;
+    }
+    .icon {
+        display: block;
+        color: #ff7600;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+    span.cancel:before {
+        content: '\f00d';
+    }
+}
+  
+/* --------------------- ACUEIL -------------------- */
+/* ------------------------------------------------- */
+.presentation {
+    padding-bottom: 50px;
+}
+.presentation video {
+    margin-left: -30px;
+    width: 105%;
+    height: auto;
+}
+
+.intro {
+	width: 100%;
+	padding-top: 50px;
+    margin: 50px 0px 50px 0px;
+    animation: autoplay;
+}
+.intro h1{
+	font-size: 50px;
+	color: whitesmoke;
+    display:inline-block;
+    -webkit-animation: 4s linear 0s infinite alternate titre_intro;
+        animation: 4s linear 0s infinite alternate titre_intro;
+}
+@-webkit-keyframes titre_intro {from { margin-left: 0%;}to {margin-left: 10%;}}
+    @keyframes titre_intro {from { margin-left: 0%;}to {margin-left: 10%;}}
+
+.intro_main {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.intro_texte {
+	margin-left: 5px;
+}
+.intro_texte p{
+	color: #fff;
+    font-family: 'Roboto Slab', serif;
+    text-align: justify;
+    font-size: 23px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+.intro_texte a{
+	background: #212121;
+    padding: 15px 13px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+}
+.intro_texte a:hover{
+    background: #ff9100;
+}
+.intro_main img {
+    height: auto;
+	width: 400px;
+	padding: 15px 15px 15px 15px;
+	border-radius: 30px;
+}
+
+.intro header span {
+    color: #FFB703;
+}
+
+
+
+/* -------------------- ABOUT ----------------------- */
+/* -------------------------------------------------- */
+
+.about {
+	width: 100%;
+	background-color: #191919bf;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.about img {
+	height: auto;
+	width: 400px;
+	padding: 15px 15px 15px 15px;
+    border-radius: 110px;
+}
+.about_texte {
+	width: 100%;
+}
+.about_texte h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.about_texte h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.about_texte p{
+	color: white;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 2px;
+	text-align: justify;
+    padding:0 15px 10px 0px;
+
+}
+.about span{
+    color: #FFB703;
+}
+
+/* MISE EN PAGE INTRODUCTION POUR SMARTPHONE */
+@media screen and (max-width: 750px) {
+    .about {
+		display: block;
+    }
+    .about img{
+		width: 90%;
+        padding: 15px 5% 15px 5%;
+		margin: auto;
+		text-align: center;
+		display: flex;
+	}
+    .about_texte h2{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .about_texte h5{
+        text-align: center;
+    }
+    .about_texte p{
+        padding:0 20px 15px 20px;
+    }
+}
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* --------------- REALISATIONS ---------------- */
+/* --------------------------------------------- */
+.realisations {
+    margin: 50px 0;
+	width: 100%;
+	background-color: #191919bf;
+    padding: 15px 15px 15px;
+}
+.realisations_texte {
+	width: 100%;
+}
+.realisations_texte h2 {
+    text-align: center;
+	color: #e0a000;
+    font-size: 61px;
+    width: 100%;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.realisations .realisations_img{
+    color: #fff;
+    padding: 20px;
+}
+.realisations .realisations_img img {
+    height: auto;
+    width: 200px;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* Bord carré plat de l'image */
+}
+.realisations .realisations_img strong {
+    color: #e0a000;
+    font-size: 22px;
+} 
+.realisations .realisations_img p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding-left: 0;
+    padding-bottom: 5px;
+    margin: 0 0 0 0;
+    text-align: center;
+    color: white;
+    width: 230px;
+    white-space: normal;
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+
+
+
+
+/* --------------- TITRE DE LA PARTIE ---------------- */
+/* --------------------------------------------------- */
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* --------------- TITRE DE LA PARTIE ---------------- */
+/* --------------------------------------------------- */
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* -------------- PIED DE PAGE : FOOTER -------------- */
+/* --------------------------------------------------- */
+footer {
+    position: sticky;
+    background: #292c2f;
+    padding: 10px 20px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0;
+    list-style: none;
+}
+footer table {
+    width: 70%;
+    padding-top: 20px;
+    height: auto;
+    border: 3px solid purple;
+    padding-bottom: 15px;
+}
+footer td {
+    display: table-cell;
+    vertical-align: inherit;
+    width: 80%;
+}
+
+footer h1 {
+    font-size: 30px;
+    margin: 0px;
+}
+footer hr {
+    border: 1px solid white;
+    background: white;
+    width: 190px;
+    margin-top: 5px;
+}
+
+footer p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+footer .fa-sharp .fa-solid .fa-phone {
+    font-size: 20px;
+}
+footer .tel {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+
+
+
+/* ---------------------------------------------------------- */
+
+
+/* MISE EN PAGE POUR SMARTPHONE */
+@media screen and (max-width: 750px) {
+	
+	.box {
+		display: block;
+	}
+	.card {
+		width: auto;
+	}
+	.competences_titre {
+		float: left;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.competences_titres h2{
+		display:inline-block;
+		font-size: 40px;
+		font-weight: bold;
+		letter-spacing: -3px;
+		line-height: 89px;
+		margin: 0;
+	}
+	.competences_sous_titres {
+		display: inline-block;
+		padding-left: 0;
+		text-align: center;
+	}
+	.competences_sous_titres h3{
+		color: #161616;
+		display: inline-block;
+		text-align: center;
+		font-size: 25px;
+		margin: 0;
+	}
+	.competences_sous_titres span{
+		float: left;
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+	}
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
