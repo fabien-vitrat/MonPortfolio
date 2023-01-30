@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mon Portfolio</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords"> 
+
+        <!-- Mes pages CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Insertion d'icons : Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Icons -->
+        <link href="img/logofv.png" rel="icon">
+    </head>
+
+    <body>
+
+        
+        <!-- Button pour déscendre au niveau du Menu -->
+        <a class="BoutonAccueil" href="#section_about"><i class="fa-solid fa-circle-chevron-down"></i></a>
+
+
+        <!-- Vidéo de présentation -->
+        <video class="presentation" src="img/presentation.mp4" type="video/mp4" width="100%" height="auto" autoplay loop muted></video>
+
+
+
+        <!-- *** MENU (HAUT de PAGE) ** -->
+        <div class="corp">
+            <nav id="header" class="flex sticky-top">
+                <!-- Création du titre du menu -->
+                <div class="logo">
+                    <a href="index.html">Mon Portfolio</a>
+                </div>
+                <!-- Création du bouton pour le menu au format smartphone -->
+                <label for="btn" class="icon">
+                    <span class="fa fa-bars"></span>
+                </label>
+                <input type="checkbox"  id="btn">
+                    
+                <!-- Création du menu -->
+                <ul>
+                    <li><a href=#section_presentation>Accueil</a></li>
+                    <li><a href=#section_about>A propos</a></li>
+                    <li><a href=#portfolio>Portfolio</a></li>
+                    <li><a href="">Mon CV</a></li>
+                </ul>
+            </nav> 
+        
+            <!-- ********************** SECTION : ABOUT ME *********************** -->
+            <section id="section_about" class="about">
+                <img src="img/moi.jpg" alt="Photo de moi">
+                <div class="about_texte">
+                    <h2>A propos</h2>
+                    <h5><span>Lycéen</span> & Dévelopeur Web</h5>
+                    <p>Née à Marseille en 2007, j'ai obtenu mon Brevet des Collèges en 2022 avec la mention très bien.</p>
+                    <p>Je suis actuellement en seconde au Lycée de Provence. Pendant plusieurs années, j'ai obtenu des certifications&nbsp;: PIX (Certification des compétances numérique), ASSR 1 et 2 (Attestation scolaire de sécurité routière).</p>
+                    <p>Je parle trois langues, le français, l'espagnol (famille) et l'anglais (culture professionnelle).</p>
+                    <p>Étant curieux, depuis un an maintenant, j'ai appris à déveloper des site internet (front and back). Mon frère qui étudie dans ce domaine m'a partagé ca passion qui est aujourd'hui aussi la mienne.</p>
+                    <p style="margin-bottom: 5px;">Dans mon quotidien, j'ai une passion pour les jeux vidéos. J'aime créer, bricoler, la mer (plongée et natation) et pratiquer du vélo ainsi que du tennis. Ayant une passion pour les drones, j'ai passé la certification Alpha Tango.</p>
+                </div>
+            </section>
+
+            <!-- ********************** SECTION : PORTFOLIO *********************************** -->
+            <section id="portfolio">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="w-100">
+                            <h2 class="titreBorder">Portfolio</h2>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="web-tab" data-toggle="tab" href="#web" role="tab" aria-controls="web" aria-selected="true">Réalisations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="false">Compétances</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="autres-tab" data-toggle="tab" href="#autres" role="tab" aria-controls="autres" aria-selected="false">Certifications </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="certificats-tab" data-toggle="tab" href="#certificats" role="tab" aria-controls="certificats" aria-selected="false">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Content Web -->
+                            <div class="tab-pane fade show active" id="web" role="tabpanel" aria-labelledby="home-tab">
+                                <p style="color: white;">Voici mes premières réalisations</p>
+
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-sm-3 work-item sc-item">
+                                            <a href="#" data-toggle="modal" data-target="#aim">
+                                                <img class="img-fluid" src="img/antiharcelement.png" alt="Site anti-cyberharcellement" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i>Site cyberharcellement</div>
+                                            </a>
+                                        </div>
+
+                                        <div class="modal fade" id="aim" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Site cyberharcelement</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 modal-left">
+                                                                <a href="https://fabien-vitrat.github.io/cyberharcelement/" target="_blank"><img src="img.jpg" alt="Site web cyberharcellement" /></a>
+                                                            </div>
+                                                            <div class="col-lg-6 modal-right">
+                                                                <h5 class="card-header">Site</h5>
+                                                                <p>
+                                                                    <a href="https://fabien-vitrat.github.io/cyberharcelement/" target="_blank">Rendez-vous sur mon site ici</a>
+                                                                </p>
+                                                                <h5 class="card-header">Outils utilisés</h5>
+                                                                <p>
+                                                                    HTML, CSS
+                                                                </p>
+                                                                <br>
+                                                                <h5 class="card-header">Description</h5>
+                                                                <p>Réalisation du site web cyberharcelement :
+                                                                    J'ai réaliser ce site dans le but de mobiliser sur le cyberharcellement
+                                                                    Réalisé lors en classe de seconde
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content Design -->
+                            <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="profile-tab">
+                                <p style="color: white;">Quelques compétances que j'ai aqueri</p>
+
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+
+                                        <div class="col-sm-3 work-item">
+                                            <a href="#" data-toggle="modal" data-target="#monavatar">
+                                                <img class="img-fluid" src="img/html.png" alt="html" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i> HTML
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="modal fade" id="monavatar" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Html</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+
+                                                            <div class="col-lg-12 modal-right">
+                                                                <h5 class="card-header">Histoire</h5>
+                                                                <p>
+                                                                    J'ai pu apprendre ce langage grâce à la création de site web.
+                                                                    En effet pendant mes différents projets de site j'ai pu découvrir entièrement le langage html.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-3 work-item">
+                                            <a href="#" data-toggle="modal" data-target="#webdesigntcc">
+                                                <img class="img-fluid" src="img/css.png" alt="CSS" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i> CSS
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="modal fade" id="webdesigntcc" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">CSS</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 modal-right">
+                                                                <h5 class="card-header">Histoire</h5>
+                                                                <p>
+                                                                    J'ai eu l'occasion d'apprendre ce langage via la réalisations de sites et de traveaux pratiques
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-sm-3 work-item">
+                                            <a href="#" data-toggle="modal" data-target="#monavatar">
+                                                <img class="img-fluid" src="img/scratch.png" alt="Scratch" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i> Scratch
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="modal fade" id="monavatar" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Scratch</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+
+                                                            <div class="col-lg-12 modal-right">
+                                                                <h5 class="card-header">Histoire</h5>
+                                                                <p>
+                                                                    J'ai pu découvrir ce langage de programmation grâce à des projets scolaire et cher moi. 
+                                                                </p>
+                                                                <a href="https://scratch.mit.edu/projects/389172047">Cliquez ici pour test mon jeux</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 work-item">
+                                            <a href="#" data-toggle="modal" data-target="#cartedevisite">
+                                                <img class="img-fluid" src="img/office.png" alt="office" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i> Office
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="modal fade" id="cartedevisite" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Office</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 modal-left">
+                                                                <img src="img/word.png" alt="word" style="height: 83px; width: auto;"/>
+                                                                <img src="img/powerpoint.png" alt="powerpoint" style="height: 100px; width: auto;"/>
+                                                                <img src="img/excel.png" alt="excel" style="height: 100px; width: auto;"/>
+                                                                <img src="img/onenote.png" alt="onenote" style="height: 100px; width: auto;"/>
+
+                                                            </div>
+                                                            <div class="col-lg-12 modal-right">
+                                                                <h5 class="card-header">Histoire</h5>
+                                                                <p>
+                                                                    En utilisant ses logiciel dans mon quotidien m'a permis de mieux de les connaitres et d'exploiter leurs fonctionnalités.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content recommandations -->
+                            <div class="tab-pane fade" id="autres" role="tabpanel" aria-labelledby="autres-tab">
+                                <p style="color: white;">Les certifications obtenus grâce à me différentes épreuves</p>
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+
+
+                                        <div class="col-sm-3 work-item">
+                                            <a href="#" data-toggle="modal" data-target="#stageklerthis">
+                                                <img class="img-fluid" src="img/pix.png" alt="Logo klerthis" />
+                                                <div class="overlay lien"><i class="fa fa-search-plus"></i> PIX
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="modal fade" id="stageklerthis" tabindex="-1" role="dialog" aria-labelledby="aim" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">PIX</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 modal-left">
+                                                                <a href="/img/attestation-pix.pdf"><p style="font-size : 25px; color: black;">Cliquez ici pour télécharger mon attestation</p></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content certificats -->
+                            <div class="tab-pane fade" id="certificats" role="tabpanel" aria-labelledby="contact-tab">
+                                <p style="color: white ;">Vous pouvez me contacter par téléphone ou par e-mail</p>
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="contact">
+                                            <img src="/img/téléphone.png" alt="telephone"><br>
+                                            <img src="/img/mail.png" alt="telephone">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FIN contents -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        
+        <footer>
+            <ul class="social_icon">
+                <li><a href="https://github.com/fabien-vitrat" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+            <p>©2023 Fabien VITRAT - Mon Portfolio</p>
+        </footer>
+
+   
+   
+        <script src="js/script.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

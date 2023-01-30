@@ -1,0 +1,585 @@
+/* ---------------------- IMPORT --------------------- */
+/* --------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+
+/* -----------------CONFIG COULEURS PAGE-------------- */
+/* --------------------------------------------------- */
+:root {
+    --ecriture: #fff;
+    --background: #111;
+}
+
+/* ------------- MISE EN PAGE DU GENERAL ------------- */
+/* --------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Animations pour tout le texte de la page */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+/* Mise en page de roulette */
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: #040404 url("../img/fond.jpg") top right no-repeat;
+    background-size: cover;
+}
+html::-webkit-scrollbar-thumb {
+    background: #ff7600;
+    border-radius: 3rem;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("../img/accueil.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* -------------- CONFIGURATION DU MENU -------------- */
+/* --------------------------------------------------- */
+
+/* MENU */
+nav {
+    background: #023047;
+    width: 100%;
+    box-shadow: 0.2px 1px 10px grey;
+    margin: 0px auto 40px auto;
+    position: sticky;
+    top: 0px;
+}
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+/* Différentes caractéristiques du Titre de mon menu */
+nav .logo a {
+    float: left;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    text-decoration: none;
+}
+/* Ajout de couleur sur une partie de mon Titre */
+nav strong {
+    color: #FFB703;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+nav ul li {
+   display: inline-block;
+   background: #023047;
+   margin: 0 5px;
+}
+nav ul li a {
+    color: #fff;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+/* Mise en page du menu active et du menu au contact de la souris */
+nav ul li a:hover,
+nav ul li a.active,
+nav ul li label.active,
+label .active {
+    border-radius: 241px 188px / 79px;
+    background: #FFB703;
+    color: #fff;
+    width: 32%;
+}
+.show,.icon,input {
+    display: none;
+}
+#btn {display: none;}
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+/* RESPONSIVE */
+/* Mise en page du bouton pour le format Smartphone */
+@media all and (max-width:450px) {
+    nav .logo a {
+        font-size: 24px;
+    }
+}
+/* Mise en page pour tablette */
+@media screen and (min-width:950px) and (max-width:1056px) {
+    nav .logo a {
+        padding-left: 40px;
+        width: 40%;
+    }
+    nav ul {
+        margin-right: 10px;
+    }
+    nav lu li a {
+        padding: 7px 11px;
+    }
+}
+/* Mise en page pour le bouton du Menu */
+@media all and (max-width:1057px) {
+    nav ul {
+        margin-right: 0px;
+        width: 100%;
+    }
+    nav .logo a {
+        padding-left: 40px;
+        width: 100%;
+    }
+    .show + a, ul {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+    .show {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 15px;
+        cursor: pointer;
+    }
+    .show-active {
+        color: #ff7600;
+        font-weight: bold;
+    }
+    label .active {
+        color: #ff7600;
+    }
+    .icon {
+        display: block;
+        color: #ff7600;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+    span.cancel:before {
+        content: '\f00d';
+    }
+}
+.BoutonAccueil{
+    position: absolute;
+    z-index: 1;
+    margin-left: 50%;
+    margin-top: 44%;
+    font-size: 25px;
+    color: white;
+}
+@media screen and (max-width: 750px) {
+    .BoutonAccueil, .BoutonAccueil:hover{
+        color: transparent;
+        cursor: normal;
+    }
+}
+
+
+/* --------------------- REGLAGES -------------------- */
+/* ------------------------------------------------- */
+.presentation {
+    padding-bottom: 50px;
+}
+.presentation video {
+    width: 100%;
+    height: auto;
+}
+.corp{
+    padding: 0 2% 0 2%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+/* -------------------- ABOUT ----------------------- */
+/* -------------------------------------------------- */
+
+.about {
+	width: 100%;
+	background-color: #191919bf;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.about img {
+	height: auto;
+	width: 400px;
+	padding: 15px 15px 15px 15px;
+    border-radius: 110px;
+}
+.about_texte {
+	width: 100%;
+}
+.about_texte h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+.about_texte h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.about_texte p{
+	color: white;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 2px;
+	text-align: justify;
+    padding:0 15px 10px 0px;
+
+}
+.about span{
+    color: #FFB703;
+}
+
+/* MISE EN PAGE INTRODUCTION POUR SMARTPHONE */
+@media screen and (max-width: 750px) {
+    .about {
+		display: block;
+    }
+    .about img{
+		width: 90%;
+        padding: 15px 5% 15px 5%;
+		margin: auto;
+		text-align: center;
+		display: flex;
+	}
+    .about_texte h2{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .about_texte h5{
+        text-align: center;
+    }
+    .about_texte p{
+        padding:0 20px 15px 20px;
+    }
+}
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* --------------- PORTFOLIO ---------------- */
+/* ------------------------------------------ */
+#portfolio {
+    margin: 50px 0;
+	width: 100%;
+	background-color: #191919bf;
+    padding: 15px 15px 15px;
+    text-align: center;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+}
+#portfolio h2 {
+    text-align: center;
+	color: #e0a000;
+    font-size: 61px;
+    width: 100%;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+    margin-top: 15px;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+}
+#portfolio h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+#portfolio p {
+    font-size: 20px;
+    color: black;
+}
+#myTab {
+    padding-top: 12px;
+}
+
+#portfolio .titreBorder:after {
+    background: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+#myTabContent {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.modal-dialog {
+    max-width: 700px !important;
+}
+
+.modal-title{
+    color: #0D1E4C;  
+}
+.modal-left img{
+    width: 100%;
+}
+.contact{
+    display: block;
+    margin: auto;
+}
+.contact img {
+    border-radius: 31px;
+    padding-top: 10px;
+    height: 104px;
+    width: auto;
+    margin: auto;
+}
+#design img {
+    width: auto;
+    height: 121px;
+}
+.lien {
+    color: whitesmoke;
+    cursor: pointer;
+}
+.lien:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 25px;
+}
+a {
+    color: white;
+    font-size: 15px;
+}
+@media screen and (max-width:750px) {
+    #competence {
+        background: none;
+        padding-bottom: 0;
+    }
+
+    #formation .fa,
+    #experience .fa {
+        width: 100%;
+    }
+
+    #competence .left-float,
+    #competence .right-float {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 5%;
+        float: none;
+    }
+
+    #competence .left-float {
+        padding: 0 2px;
+    }
+
+    .right-float {
+        background: #f3f3f3;
+        
+    }
+
+    #portfolio .nav {
+        display: block;
+    }
+ 
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+
+
+/* --------------- TITRE DE LA PARTIE ---------------- */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* --------------- TITRE DE LA PARTIE ---------------- */
+/* --------------------------------------------------- */
+
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+/* -------------- PIED DE PAGE : FOOTER -------------- */
+/* --------------------------------------------------- */
+footer {
+    position: sticky;
+    background: #292c2f;
+    padding: 10px 20px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0;
+    list-style: none;
+}
+footer .social_icon li a {
+    font-size: 20px;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+    color: orangered;
+}
+footer p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+
+/* ---------------------------------------------------------- */
+
+
+/* MISE EN PAGE POUR SMARTPHONE */
+@media screen and (max-width: 750px) {
+	
+	.box {
+		display: block;
+	}
+	.card {
+		width: auto;
+	}
+	.competences_titre {
+		float: left;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.competences_titres h2{
+		display:inline-block;
+		font-size: 40px;
+		font-weight: bold;
+		letter-spacing: -3px;
+		line-height: 89px;
+		margin: 0;
+	}
+	.competences_sous_titres {
+		display: inline-block;
+		padding-left: 0;
+		text-align: center;
+	}
+	.competences_sous_titres h3{
+		color: #161616;
+		display: inline-block;
+		text-align: center;
+		font-size: 25px;
+		margin: 0;
+	}
+	.competences_sous_titres span{
+		float: left;
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+	}
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
